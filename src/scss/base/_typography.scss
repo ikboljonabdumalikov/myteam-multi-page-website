@@ -1,0 +1,106 @@
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $color-white;
+  background-color: $color-primary-dark;
+}
+
+// Headings
+h1 {
+  @include heading-xl;
+}
+
+h2 {
+  @include heading-lg;
+}
+
+h3 {
+  @include heading-md;
+}
+
+h4,
+h5,
+h6 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+}
+
+// Paragraphs
+p {
+  @include body-text;
+  margin-bottom: $spacing-md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+a {
+  color: $color-secondary;
+  transition: color 0.3s ease;
+  
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Font weight utilities
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+// Color utilities
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.text-dark {
+  color: $color-primary-dark;
+}

@@ -1,0 +1,57 @@
+// ==========================================================================
+// NAVIGATION
+// ==========================================================================
+
+.nav {
+  &__list {
+    @include flex-center;
+    gap: $spacing-lg;
+    
+    @include mobile {
+      @include flex-column;
+      gap: $spacing-md;
+    }
+  }
+  
+  &__item {
+    position: relative;
+  }
+  
+  &__link {
+    color: $color-white;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-lg;
+    transition: color 0.3s ease;
+    position: relative;
+    
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: $color-primary;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+    }
+    
+    &.is-active {
+      color: $color-primary;
+      
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
