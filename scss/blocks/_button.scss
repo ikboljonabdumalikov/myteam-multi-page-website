@@ -1,0 +1,22 @@
+.button-header {
+  display: none;
+  width: 20px;
+  height: 17px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url("../../img/gamburger.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@include breakpoint-down (560) {
+  .button-header {
+    display: block;
+  }
+
+  .sitenav--open ~ .button-header {
+    z-index: 50;
+    background-image: url("../../img/x.svg");
+  }
+}

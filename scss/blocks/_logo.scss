@@ -1,0 +1,17 @@
+.logo {
+  display: block;
+}
+
+.logo__img {
+  display: inline-block;
+  vertical-align: baseline;
+  max-width: 160px;
+  height: 40;
+}
+
+@include breakpoint-down (768) {
+  .logo__img {
+    max-width: 128px;
+    height: 32px;
+  }
+}

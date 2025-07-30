@@ -1,0 +1,131 @@
+.teams {
+  background-color: #012F34;
+  background-image: url("../../img/team-bg.svg");
+  background-position: calc(50% + 680px) bottom;
+  background-repeat: no-repeat;
+}
+
+.teams__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 198px;
+  padding-bottom: 140px;
+}
+
+.teams__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 445px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #FFFFFF;
+  padding-top: 54px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 4px;
+    background-color: $red;
+  }
+}
+
+.teams__list {
+  @include reset-list;
+  padding-top: 50px;
+  max-width: 540px;
+}
+
+.team__item {
+  display: flex;
+  margin-bottom: 32px;
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &--man::before {
+    background-image: url("../img/man.png");
+  }
+  &--customization::before {
+    background-image: url("../img/customization.png");
+  }
+  &--growth::before {
+    background-image: url("../img/growth.png");
+  }
+  &:nth-child(3n) {
+    margin-bottom: 0;
+  }
+}
+
+.team__item-inner {
+  margin-left: 23px;
+}
+
+.team__item-heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: $red;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.team__item-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+@include breakpoint-down (768) {
+  .teams {
+    background-position: calc(50% + 390px) top;
+  }
+  .teams__container {
+    max-width: 573px;
+    flex-direction: column;
+  }
+
+  .teams__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@include breakpoint-down (375) {
+  .teams {
+    background-position: calc(50% + 180px) top;
+  }
+  .teams__container {
+    max-width: 327px;
+    flex-direction: column;
+  }
+  .team__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .teams__title {
+    max-width: 240px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    padding-top: 32px;
+  }
+
+  .teams__container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
